@@ -9,15 +9,11 @@ const App = () => {
   const [error, setError] = useState(null);
 
   const toggleBackground = () => {
-    //update setBackground using ternary
-    setBackground((prevBackground) =>
-      prevBackground === "white" ? "lightgray" : "white"
-    );
+    setBackground("lightgray");
   };
 
   const incrementCounter = () => {
-    // change increment by one
-    setCounter((prevCounter) => prevCounter + 1);
+    setCounter((prevCounter) => prevCounter + 2);
   };
 
   const handleInputChange = (event) => {
@@ -28,8 +24,6 @@ const App = () => {
     event.preventDefault();
     if (inputValue.trim() !== "") {
       console.log("Submitted:", inputValue);
-      // clear input value
-      setInputValue("");
       setShowModal(true);
       setError(null);
     } else {
@@ -38,10 +32,7 @@ const App = () => {
     }
   };
   
-
   const closeModal = () => {
-    //update setShowModal State to close modal
-    setShowModal(false);
   };
 
   return (
@@ -53,8 +44,7 @@ const App = () => {
       </button>
 
       <p className="counter">Counter: {counter}</p>
-      {/* add onClick attribute and call incrementCounter function */}
-      <button className="increment-btn" onClick={incrementCounter}>
+      <button className="increment-btn">
         Increment Counter
       </button>
 
@@ -74,8 +64,7 @@ const App = () => {
         </button>
       </form>
 
-    {/* render error message when error exists */}
-      {error && <p className="error-message">{error}</p>}
+      <p className="error-message">Please enter something before submitting!</p>
 
       {showModal && (
         <div className="modal">
