@@ -70,3 +70,9 @@ Please note: Always ensure to follow the usage guidelines provided by the API to
 
 
 INCLUDE A README
+
+<img src="./assets/fetch-apod.png" alt="fetch apod" width="400px" />
+<img src="./assets/fetch-mars.png" alt="fetch mars" width="400px" />
+<img src="./assets/fetch-neo.png" alt="fetch neo" width="400px" />
+<img src="./assets/search.png" alt="search apod" width="400px" />
+

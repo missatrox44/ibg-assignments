@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", function () {
     .addEventListener("click", () => searchAPOD());
 });
 
-const API_KEY = "IOvakBwceXb6djsmcMthMVFMHKsyWQ2um6law10X"; // Replace with your NASA API key
+const API_KEY = "YOUR API KEY HERE"; // Replace with your NASA API key
 
 // fetches astronomy photo of the day with caption
 function fetchAPOD() {
