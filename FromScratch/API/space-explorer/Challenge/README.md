@@ -18,7 +18,6 @@ In this assignment, you will design and implement a web-based application called
 
 **AS A USER** I want a visually pleasing application, **SO THAT** my exploration of space data is enjoyable.
 
-<img src="./assets/landing.png" alt="fetch apod" width="400px" />
 
 ## Task List
 ### Task 1: Fetch APOD
@@ -78,6 +77,7 @@ Happy Coding!
 
 
 ## App Screenshots
+<img src="./assets/landing.png" alt="fetch apod" width="400px" /> <br/>
 <img src="./assets/fetch-apod.png" alt="fetch apod" width="400px" /> <br/>
 <img src="./assets/fetch-mars.png" alt="fetch mars" width="400px" /> <br/>
 <img src="./assets/fetch-neo.png" alt="fetch neo" width="400px" /> <br/>
