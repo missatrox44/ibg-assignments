@@ -52,9 +52,15 @@ function fetchRoverPhotos() {
     })
     .then((data) => {
       const photos = data.latest_photos;
+      const randomPhotos = getRandomElements(photos, 14); // Get 14 random photos
       let photosHTML = "";
-      photos.forEach((photo) => {
-        photosHTML += `<img src="${photo.img_src}" alt="Mars Rover Photo">`;
+      randomPhotos.forEach((photo) => {
+        const { img_src, earth_date } = photo;
+        photosHTML += `
+            <div class="rover-photo">
+              <img src="${img_src}" alt="Mars Rover Photo">
+              <p>${earth_date}</p>
+            </div>`;
       });
       document.getElementById("rover-photos-result").innerHTML = photosHTML;
     })
@@ -64,6 +70,12 @@ function fetchRoverPhotos() {
         error
       );
     });
+}
+
+// Helper function to get a specified number of random elements from an array
+function getRandomElements(array, numElements) {
+  const shuffled = array.sort(() => 0.5 - Math.random());
+  return shuffled.slice(0, numElements);
 }
 
 // fetches a list of near-Earth objects (NEOs) - names and whether each object is potentially hazardous
@@ -78,14 +90,55 @@ function fetchNEOData() {
     })
     .then((data) => {
       const neos = data.near_earth_objects;
-      let neosHTML = "<ul>";
-      neos.forEach((neo) => {
-        neosHTML += `<li>${neo.name} - Potentially Hazardous: ${
-          neo.is_potentially_hazardous_asteroid ? "Yes" : "No"
-        }</li>`;
+      let neosHTML = `
+          <table>
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Size (meters)</th>
+                <th>Velocity (km/h)</th>
+                <th>Potential Hazard</th>
+              </tr>
+            </thead>
+            <tbody>`;
+
+      const neoPromises = neos.map((neo) => {
+        const detailedUrl = neo.links.self;
+        return fetch(detailedUrl).then((response) => response.json());
       });
-      neosHTML += "</ul>";
-      document.getElementById("neo-data-result").innerHTML = neosHTML;
+
+      Promise.all(neoPromises)
+        .then((detailedData) => {
+          detailedData.forEach((detailedInfo, index) => {
+            const neo = neos[index];
+            const size =
+              detailedInfo.estimated_diameter.meters.estimated_diameter_max.toFixed(
+                2
+              );
+            const velocity =
+              detailedInfo.close_approach_data[0].relative_velocity
+                .kilometers_per_hour;
+            neosHTML += `
+                <tr>
+                  <td>${neo.name}</td>
+                  <td>${size}</td>
+                  <td>${velocity}</td>
+                  <td>${
+                    neo.is_potentially_hazardous_asteroid ? "Yes" : "No"
+                  }</td>
+                </tr>`;
+          });
+          neosHTML += `
+              </tbody>
+            </table>`;
+          document.getElementById("neo-data-result").innerHTML = neosHTML;
+        })
+        .catch((error) => {
+          console.error(
+            "There has been a problem with your fetch operation:",
+            error
+          );
+        });
     })
     .catch((error) => {
       console.error(
