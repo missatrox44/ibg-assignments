@@ -1,0 +1,13 @@
+/* starter styles, not required */
+body {
+  font-family: Arial, sans-serif;
+  padding: 0;
+  margin: 0;
+  background-color: #f4f4f4;
+}
+
+button {
+  margin: 20px 0;
+  padding: 10px 20px;
+  font-size: 1rem;
+}

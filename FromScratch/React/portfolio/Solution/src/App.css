@@ -1,0 +1,296 @@
+/* navigation styles */
+.navbar {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar li {
+  margin-right: 10px;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: #000;
+}
+
+.navbar a:hover {
+  color: #888;
+}
+
+/* about me component */
+.about-me-container {
+  text-align: center;
+}
+
+.profile-image {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  margin-bottom: 20px;
+}
+
+.description {
+  font-size: 16px;
+  line-height: 1.5;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+/* footer component */
+.footer {
+  background-color: #f8f8f8;
+  padding: 20px;
+  text-align: center;
+}
+
+.social-links a {
+  color: #333;
+  font-size: 24px;
+  margin: 0 10px;
+  text-decoration: none;
+}
+
+.social-links a:hover {
+  color: #007bff;
+}
+
+/* Experience component */
+
+.experience-container {
+  margin-top: 30px;
+}
+
+.experiences {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 20px;
+}
+
+.experience {
+  background-color: #f8f8f8;
+  padding: 20px;
+}
+
+.experience h3 {
+  margin-top: 0;
+}
+
+.position {
+  font-weight: bold;
+}
+
+.duration {
+  color: #888;
+  margin-bottom: 10px;
+}
+
+.description {
+  margin-top: 0;
+}
+
+/* Education component */
+.education-container {
+  margin-top: 30px;
+}
+
+.education {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 20px;
+}
+
+.education-item {
+  background-color: #f8f8f8;
+  padding: 20px;
+}
+
+.education-item h3 {
+  margin-top: 0;
+}
+
+.degree {
+  font-weight: bold;
+}
+
+.type {
+  color: #888;
+}
+
+.honors {
+  font-style: italic;
+  margin-top: 5px;
+}
+
+.years-attended {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #888;
+}
+
+
+/* skills component */
+.skills-container {
+  margin-top: 30px;
+}
+
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.skill {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  background-color: #f8f8f8;
+  border-radius: 4px;
+  width: 150px;
+}
+
+.skill p {
+  margin-left: 8px;
+}
+
+.skill svg {
+  font-size: 20px;
+  color: #888;
+}
+
+/* contact form */
+.contact-container {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.contact-form {
+  width: 400px;
+  padding: 30px;
+  background-color: #f8f8f8;
+  border-radius: 8px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+textarea {
+  height: 120px;
+}
+
+button[type='submit'] {
+  padding: 12px 24px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button[type='submit']:hover {
+  background-color: #0056b3;
+}
+
+
+/* projects styles */
+.projects-container {
+  margin-top: 30px;
+}
+
+.projects {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 20px;
+}
+
+.project {
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.project img {
+  width: 100%;
+  height: auto;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.project:hover .overlay {
+  opacity: 1;
+}
+
+.overlay h3,
+.overlay p {
+  margin: 0;
+  padding: 10px;
+  text-align: center;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: blur(5px);
+  /* Adjust this value to increase or decrease the blur effect */
+  background-color: rgba(0, 0, 0, 0.5);
+  /* Add a semi-transparent background to modal */
+}
+
+.modal-content {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  width: 80%;
+  max-width: 500px;
+  /* Adjust this value as needed */
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.close {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  cursor: pointer;
+  font-size: 22px;
+  color: black;
+}
