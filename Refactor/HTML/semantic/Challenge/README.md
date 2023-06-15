@@ -48,4 +48,18 @@ To help you complete this assignment, refer to the [MDN Docs](https://developer.
 
 Example semantic HTML tags: `<header>`, `<footer>`, `<nav>`, `<section>`, `<article>`, `<aside>`, `<main>` 
 
+
+### EXTRA HTML CHALLENGES
+- Make the links active using anchor tags.
+- Ensure the links in the navigation bar direct users to the section of the web page that has the corresponding name.
+- Configure links to external sites to open in a new window.
+- Add a language attribute to the anchor tags to provide information to screen readers about the language of the linked resource.
+- Utilize ARIA roles to signify the roles of elements, which can assist assistive technology in comprehending your content.
+- Add a 'lang' attribute to the HTML tag.
+
+### EXTRA CSS CHALLENGES
+- Group common properties
+- Group similar selectors
+- Use shorthand properties
+
 ![website](./assets/site-example.png)
