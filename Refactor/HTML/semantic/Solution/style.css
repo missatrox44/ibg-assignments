@@ -2,21 +2,24 @@ body {
   font-family: Arial, sans-serif;
 }
 
-header {
+header, footer {
   background-color: #f8f9fa;
-  padding: 20px;
+  padding: 20px 0;
   text-align: center;
+}
+
+h1, h2 {
+  font-weight: bold;
 }
 
 h1 {
   font-size: 30px;
-  font-weight: bold;
 }
 
 nav ul {
   display: flex;
   justify-content: space-around;
-  list-style-type: none;
+  list-style: none;
   padding: 0;
   margin-top: 20px;
 }
@@ -37,17 +40,10 @@ section {
 
 h2 {
   font-size: 24px;
-  font-weight: bold;
 }
 
 aside {
   width: 25%;
-}
-
-footer {
-  background-color: #f8f9fa;
-  padding: 20px;
-  text-align: center;
 }
 
 img {
@@ -55,4 +51,12 @@ img {
   margin: 20px auto;
   max-width: 100%;
   height: auto;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
 }

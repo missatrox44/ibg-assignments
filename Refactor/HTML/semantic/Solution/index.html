@@ -4,17 +4,23 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="index.css" />
-    <title>Title of Webpage Should Go Here</title>
+    <link rel="stylesheet" href="style.css" />
+    <title>My Website</title>
   </head>
   <body>
     <header>
       <h1>My Website</h1>
       <nav>
-        <ul>
-          <li><a href="#home">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#contact">Contact</a></li>
+        <ul role="menubar">
+          <li role="none">
+            <a href="#home" role="menuitem" lang="en">Home</a>
+          </li>
+          <li role="none">
+            <a href="#about" role="menuitem" lang="en">About</a>
+          </li>
+          <li role="none">
+            <a href="#contact" role="menuitem" lang="en">Contact</a>
+          </li>
         </ul>
       </nav>
     </header>
@@ -77,9 +83,33 @@
       <aside>
         <h2>Links</h2>
         <ul>
-          <li><a target="_blank" href="https://github.com/">GitHub</a></li>
-          <li><a target="_blank" href="https://twitter.com/">Twitter</a></li>
-          <li><a target="_blank" href="https://linkedin.com/">LinkedIn</a></li>
+          <li>
+            <a
+              target="_blank"
+              href="https://github.com/"
+              aria-label="GitHub (opens in a new window)"
+              rel="noopener noreferrer"
+              >GitHub</a
+            >
+          </li>
+          <li>
+            <a
+              target="_blank"
+              href="https://twitter.com/"
+              aria-label="Twitter (opens in a new window)"
+              rel="noopener noreferrer"
+              >Twitter</a
+            >
+          </li>
+          <li>
+            <a
+              target="_blank"
+              href="https://linkedin.com/"
+              aria-label="LinkedIn (opens in a new window)"
+              rel="noopener noreferrer"
+              >LinkedIn</a
+            >
+          </li>
         </ul>
       </aside>
     </main>

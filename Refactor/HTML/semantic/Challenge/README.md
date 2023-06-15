@@ -33,7 +33,7 @@ Are you ready for the challenge? Here are the task requirements.
 - Confirm that the heading tags fall in a sequential order, improving document outline and accessibility
 
 ### Task 5: Refactor CSS for Improved Organization and Readability
-- The existing `index.css  file contains CSS tules
+- The existing `style.css`  file contains CSS rules
 - Refactor the CSS file by consolidating selectors and properties, organizing them to match the semantic structure of the HTML elements, and adding comments before each element or section of the page
 
 ### Task 5: Refactor HTML with Semantic Elements
@@ -49,5 +49,3 @@ To help you complete this assignment, refer to the [MDN Docs](https://developer.
 Example semantic HTML tags: `<header>`, `<footer>`, `<nav>`, `<section>`, `<article>`, `<aside>`, `<main>` 
 
 ![website](./assets/site-example.png)
-
-
