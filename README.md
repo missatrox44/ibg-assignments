@@ -1,2 +1,2 @@
 # ibg-assignments
-Proposed assignments for bootcamp students
+Proposed assignments/lessons for bootcamp students
