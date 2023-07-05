@@ -31,14 +31,16 @@ The new blog entries should be added without refreshing the page (i.e., the form
 Each new blog entry should be added at the top, so the most recent entries are always first
 
 The date should be displayed in a user-friendly format
-Error handling: The form should not be submitted if any of the input fields are empty. Display an error message to the user in this case
-Evaluation Criteria:
 
-Correctness of HTML, CSS, and JavaScript code
-How well the JavaScript interacts with the DOM to dynamically add new blog entries
-Overall design and user experience of the blog page
-Responsiveness and styling of the page
-Error handling: Does the program handle empty form inputs gracefully?
+Error handling: The form should not be submitted if any of the input fields are empty. Display an error message to the user in this case
+
+## Evaluation Criteria:
+
+- Correctness of HTML, CSS, and JavaScript code
+- How well the JavaScript interacts with the DOM to dynamically add new blog entries
+- Overall design and user experience of the blog page
+- Responsiveness and styling of the page
+- Error handling: Does the program handle empty form inputs gracefully?
 
 ## Extra Challenge:
 Add the ability to delete individual blog entries, or add a 'Like' button to each blog entry and keep track of how many likes each entry has.
