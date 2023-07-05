@@ -3,6 +3,8 @@
 ## Objective: 
 The goal of this assignment is to create a personal blogging web page where the users can add new blog entries dynamically using a form. Each new entry should contain a title, content, and the date it was created.
 
+![app demo](./assets/blog.gif)
+
 ## Criteria:
 
 HTML: Create an HTML page that contains the following:
